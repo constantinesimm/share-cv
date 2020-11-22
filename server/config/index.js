@@ -1,16 +1,19 @@
-const path = require('path');
-
-if (process.env.NODE_ENV !== 'production') require('dotenv').config({ path: path.join(__dirname + '/../../.env') });
+const { join } = require('path');
+require('dotenv').config({ path: join(__dirname + '/../../.env')});
 
 module.exports = {
+	appBaseUrl: process.env.NODE_ENV !== 'production' ? 'http://app.localhost:8080' : 'https://app.share-cv.com',
 	secretString: process.env.CONTROL_STRING,
-	sessionSecretString: process.env.SESSION_CONTROL_STRING,
+	staticBasePath: process.env.NODE_ENV !== 'production' ? 'public' : 'dist',
 	database: {
-		mongo: {
-			uri: `mongodb+srv://${ process.env.DB_USER }:${ process.env.DB_USER_PASS }@${ process.env.DB_HOST }/${ process.env.DB_NAME }?retryWrites=true&w=majority`, //!global.isProduction ? `mongodb://localhost:27017/${ process.env.DB_NAME }` :
+		mongodb: {
+			uri: process.env.NODE_ENV !== 'production' ?
+				`mongodb://localhost:27017/${ process.env.DB_NAME }` :
+				`mongodb+srv://${ process.env.DB_USER }:${ process.env.DB_USER_PASS }@${ process.env.DB_HOST }/${ process.env.DB_NAME }?retryWrites=true&w=majority`,
 			options: {
 				useNewUrlParser: true,
-				useUnifiedTopology: true
+				useUnifiedTopology: true,
+				useFindAndModify: false
 			}
 		}
 	},

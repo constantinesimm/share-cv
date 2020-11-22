@@ -1,0 +1,16 @@
+body {
+    position: relative;
+    min-height: calc(100% - 150px);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #f8f8f8;
+}
+
+a > i {
+    margin-right: 5px;
+}
+
+.el-tooltip__popper {
+    font-size: 16px!important;
+}

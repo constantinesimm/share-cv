@@ -1,24 +1,59 @@
 {
   "name": "share-cv",
   "version": "0.1.0",
+  "description": "'Share-cv' Fullstack Web Application",
+  "author": "Kostiantyn Peschanov (constantine.peschanov@gmail.com)",
+  "license": "MIT",
   "private": true,
+  "main": "server/app.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "node ./server/bin/www",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev:server": "nodemon server/bin/www",
+    "dev:app": "cross-env NODE_ENV=development concurrently \"npm run dev:server\" \"npm run serve\"",
+    "dev:static": "cross-env NODE_ENV=development npm run build && npm run dev:server",
+    "postinstall": "npm run build"
   },
   "dependencies": {
+    "ajv": "^6.12.6",
+    "ajv-errors": "^1.0.1",
+    "ajv-keywords": "^3.5.2",
+    "axios": "^0.21.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "element-ui": "^2.14.1",
+    "express": "^4.17.1",
+    "express-locale": "^2.0.0",
+    "helmet": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.15",
+    "nodemailer": "^6.4.16",
+    "vue": "^2.6.11",
+    "vue-router": "^3.4.9",
+    "vuex": "^3.5.1",
+    "vuex-persistedstate": "^4.0.0-beta.1",
+    "webpack": "^5.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.9",
+    "@vue/cli-plugin-vuex": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6",
+    "sass-loader": "^10.1.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,
@@ -34,6 +69,20 @@
     },
     "rules": {}
   },
+  "keywords": [
+    "MongoDB",
+    "ExpressJS",
+    "VueJS",
+    "NodeJS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:constantinesimm/share-cv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/constantinesimm/share-cv/issues"
+  },
+  "homepage": "https://github.com/constantinesimm/share-cv#readme",
   "browserslist": [
     "> 1%",
     "last 2 versions",

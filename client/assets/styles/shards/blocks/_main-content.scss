@@ -1,0 +1,9 @@
+// Main content adjustments
+
+.default-layout .row .main-content > .main-content-container.container-fluid {
+  min-height: 100vh;
+}
+
+.admin-layout .row .main-content > .main-content-container.container-fluid {
+  min-height: calc(100vh - #{$main-navbar-height + $main-footer-height});
+}

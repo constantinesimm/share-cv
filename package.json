@@ -23,6 +23,7 @@
     "axios": "^0.21.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
     "core-js": "^3.7.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -30,18 +31,22 @@
     "express": "^4.17.1",
     "express-locale": "^2.0.0",
     "express-subdomain": "^1.0.5",
-    "express-subdomain-router": "^1.0.3",
     "helmet": "^4.2.0",
     "i18n": "^0.13.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.15",
     "nodemailer": "^6.4.16",
     "pug": "^3.0.0",
+    "secure-ls": "^1.2.6",
+    "shards-ui": "^3.0.0",
+    "shards-vue": "^1.0.7",
     "vue": "^2.6.11",
+    "vue-i18n": "^8.22.2",
     "vue-router": "^3.4.9",
     "vuex": "^3.5.1",
     "vuex-persistedstate": "^4.0.0-beta.1",
-    "webpack": "^5.6.0"
+    "webpack": "^4.44.2",
+    "webpack-merge": "^5.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -58,20 +63,6 @@
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
   "keywords": [
     "MongoDB",
     "ExpressJS",
@@ -85,10 +76,5 @@
   "bugs": {
     "url": "https://github.com/constantinesimm/share-cv/issues"
   },
-  "homepage": "https://github.com/constantinesimm/share-cv#readme",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "homepage": "https://github.com/constantinesimm/share-cv#readme"
 }

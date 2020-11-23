@@ -5,10 +5,12 @@ module.exports = {
     assetsDir: './assets/',
     configureWebpack: {
         devServer: {
-            clientLogLevel: 'info',
-            watchOptions: {
-                poll: true
-            }
+          compress: true,
+          disableHostCheck: true,
+          clientLogLevel: 'info',
+          watchOptions: {
+            poll: true
+          }
         },
         output: {
             filename: 'share-cv.min.js'

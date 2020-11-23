@@ -33,7 +33,7 @@ router.post('/password/reset', (req, res, next) => {
         .catch(error => next(new HttpError(error.status, error.message)))
 });
 
-router.post('/password/renew', (req, res, next) => {
+router.post('/password/confirm', (req, res, next) => {
     AuthService.secretResetConfirm(req.body)
         .then(data => res.json(data))
         .catch(error => next(new HttpError(error.status, error.message)))

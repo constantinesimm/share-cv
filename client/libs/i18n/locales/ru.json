@@ -1,0 +1,27 @@
+{
+  "validate.pass.lowercase": "Пароль должен содержать хотя бы 1 букву в нижнем регистре",
+  "validate.pass.uppercase": "Пароль должен содержать хотя бы 1 заглавную букву",
+  "validate.pass.digit": "Пароль должен содержать хотя бы 1 цифру",
+  "validate.pass.length": "Пароль должен быть длиной от 6 до 14 символов, состоять из букв латиницы и цифр",
+  "validate.passConfirm.compare": "Password and Confirm doesn't compare",
+  "validate.name": "Может состоять из букв латиници и кириллицы, пробела и тире",
+  "validate.username": "Некорретный формат. Пример: @username",
+  "validate.phoneExample": "Пример номера: +99 (999) 999 99 99",
+  "validate.inputRequired": "Поле обязательно к заполнению",
+  "validate.format": "Некорректный формат",
+  "app.auth.Login": "Авторизация",
+  "app.auth.Register": "Создать аккаунт",
+  "app.auth.Action.Title": "{ title }",
+  "app.auth.ResetPassword": "Восстановление пароля",
+  "app.auth.passInput": "Пароль",
+  "app.auth.passConfirmInput": "Подтверждение пароля",
+  "app.auth.loginSubmit": "Войти",
+  "app.auth.registerSubmit": "Создать",
+  "app.auth.actionSubmit": "Подтвердить",
+  "app.auth.resetSubmit": "Восстановить пароль",
+  "app.auth.actionAlertForbidden": "Доступ запрещён",
+  "app.auth.actionAlertReason": "Токен подтверждения некоректный или истёк срок действия",
+  "app.auth.loginLink": "Страница авторизации",
+  "app.auth.forgotPass": "Забыли пароль?"
+}
+

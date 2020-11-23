@@ -6,6 +6,6 @@ const routes = {
 
 module.exports = app => {
     app
-        .use('/api/auth', routes.auth)
-        .use(subdomain('app', routes.auth))
+      .use(subdomain('app', routes.auth))
+      .use('/api/auth', routes.auth)
 };
